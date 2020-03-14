@@ -1,0 +1,17 @@
+@import '~@codeinc.mx/sass-helpers-library/sass/main.scss';
+
+@mixin classic-hero(
+  $class__name: 'classic-hero',
+  $config__map: ()
+) {
+
+  .#{$class__name} {
+    @if( map-value($config__map, 'full-screen', true) ){
+      width: 100vw;
+      height: 100vh;
+    }
+
+    @content;
+
+  }
+}

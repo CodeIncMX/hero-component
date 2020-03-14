@@ -1,0 +1,18 @@
+@import '~@codeinc.mx/page-template-component/scss/pageTemplate.scss';
+@import '~@codeinc.mx/headings-component/scss/headings.scss';
+@include default-headings();
+
+
+@import '../scss/classic.scss';
+
+// $config: (
+//   full-screen: false,
+// );
+
+// @include classic-hero('hero', $config) {
+@include classic-hero('hero') {
+  background-color: #0C2841;
+  color: white;
+}
+
+
