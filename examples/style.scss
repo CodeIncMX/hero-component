@@ -10,9 +10,9 @@
 // );
 
 // @include classic-hero('hero', $config) {
-@include classic-hero('hero') {
-  background-color: #0C2841;
-  color: white;
+@include classic-hero() {
+  background-color: cornflowerblue;
+  color: whitesmoke;
 }
 
 
