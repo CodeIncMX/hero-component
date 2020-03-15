@@ -1,5 +1,3 @@
-
-
 -config = {}
 -config.copy = {}
 
@@ -7,10 +5,7 @@
 - config.className = 'classic-hero'
 - config.copy.labels = ['Slogan de', 'tu marca'];
 - config.copy.isBold = [ true, false ];
-- config.copy.tags = ['h2','h2'];
-- config.copy.animations = ['fadeInUp','fadeInUp'];
-- config.copy.speed = ['normal','fast']; //- false to turn off delay
-- config.copy.delaySpeed = ['x1','x2']; //- false to turn off delay
+- config.copy.tags = ['h1','h2'];
 
 block heroConfig
 
@@ -19,18 +14,8 @@ block heroConfig
 .grid(class=config.className)
   .col-full
     each line in config.copy.labels
+
       - var classes = config.className + "__title";
-
-      if config.copy.animations[idx]
-        - classes = classes + " " + config.copy.animations[idx];
-
-      if config.copy.delaySpeed[idx] === 'x1'
-        - classes = classes + " afx--delay";
-      else if config.copy.delaySpeed[idx]
-        - classes = classes + " afx--delay--" + config.copy.delaySpeed[idx];
-
-      if config.copy.speed[idx] !== 'normal'
-        - classes = classes + " afx--" + config.copy.speed[idx];
 
       if config.copy.isBold[idx]
         #{config.copy.tags[idx]}(class=classes)
