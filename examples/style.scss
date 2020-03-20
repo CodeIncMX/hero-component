@@ -2,17 +2,19 @@
 @import '~@codeinc.mx/headings-component/scss/headings.scss';
 @include default-headings();
 
-
 @import '../scss/classic.scss';
 
-// $config: (
-//   full-screen: false,
-// );
 
-// @include classic-hero('hero', $config) {
+// @include classic-hero('classicHero', (
+//   full-screen: false,
+// )) {
 @include classic-hero() {
-  background-color: cornflowerblue;
-  color: whitesmoke;
+  background-color: lightseagreen;
+  color: white;
+
+  &__copy {
+    margin-top: 30vh;
+  }
 
   &__title {
     @include animate(fadeInUp) {
@@ -27,7 +29,5 @@
     &:nth-child(2) {
       animation-delay: 1s;
     }
-
   }
-
 }

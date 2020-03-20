@@ -2,7 +2,7 @@
 -config.copy = {}
 
 //- Default Values
-- config.className = 'classic-hero'
+- config.className = 'classicHero'
 - config.copy.labels = ['Slogan de', 'tu marca'];
 - config.copy.isBold = [ true, false ];
 - config.copy.tags = ['h1','h2'];
@@ -11,16 +11,14 @@ block heroConfig
 
 - var idx = 0;
 
-.grid(class=config.className)
-  .col-full
-    each line in config.copy.labels
-
-      - var classes = config.className + "__title";
-
-      if config.copy.isBold[idx]
-        #{config.copy.tags[idx]}(class=classes)
-          b= config.copy.labels[idx]
-      else
-        #{config.copy.tags[idx]}(class=classes)= config.copy.labels[idx]
-
-      - idx++
+div(class=config.className)
+  div(class=config.className + "__container")
+    div(class=config.className + "__copy")
+      each line in config.copy.labels
+        - var classes = config.className + "__title";
+        if config.copy.isBold[idx]
+          #{config.copy.tags[idx]}(class=classes)
+            b= config.copy.labels[idx]
+        else
+          #{config.copy.tags[idx]}(class=classes)= config.copy.labels[idx]
+        - idx++
