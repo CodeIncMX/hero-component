@@ -33,5 +33,17 @@
         xl: half
       ));
     }
+
+    &__cta {
+      @include col-map((
+        starts-in: full,
+        xs: full,
+        sm: full,
+        md: half,
+        lg: half,
+        xl: half
+      ));
+    }
+
   }
 }

@@ -1,4 +1,13 @@
 extends ../pug/classic.pug
 
-block heroConfig
-  - config.copy.labels = ['Escribe aquí el slogan', 'de tu marca y sus beneficios'];
+//- block heroConfig
+//-   - config.className = 'classicHero'
+//-   - config.cta = false
+
+block copy
+  h1 Escribe aquí tu slogan
+  h2
+    b en negritas
+
+block callToAction
+  a(href='#') Click aquí
