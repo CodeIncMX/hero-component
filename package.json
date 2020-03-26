@@ -1,6 +1,6 @@
 {
   "name": "@codeinc.mx/hero-component",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "A great hero component for web design and development projects by Code Inc MX",
   "main": "scss/classic.scss",
   "scripts": {
@@ -31,7 +31,6 @@
     "webpack-dev-server": "3.10.3"
   },
   "dependencies": {
-    "@codeinc.mx/headings-component": "0.1.0",
     "@codeinc.mx/page-template-component": "0.1.7",
     "@codeinc.mx/sass-helpers-library": "0.1.1"
   }
