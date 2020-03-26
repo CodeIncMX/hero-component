@@ -2,32 +2,13 @@
 @import '~@codeinc.mx/headings-component/scss/headings.scss';
 @include default-headings();
 
-@import '../scss/classic.scss';
+@import '../scss/basic.scss';
 
-
-// @include classic-hero('classicHero', (
-//   full-screen: false,
-// )) {
-@include classic-hero() {
+@include basic-hero('hero') {
   background-color: lightseagreen;
   color: white;
 
   &__copy {
     margin-top: 30vh;
-  }
-
-  &__title {
-    @include animate(fadeInUp) {
-      opacity: 0;
-      animation-duration: 0.7s;
-    }
-
-    &:first-child {
-      animation-delay: 0.5s;
-    }
-
-    &:nth-child(2) {
-      animation-delay: 1s;
-    }
   }
 }

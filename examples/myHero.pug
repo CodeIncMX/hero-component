@@ -1,13 +1,7 @@
-extends ../pug/classic.pug
+extends ../pug/basic.pug
 
-//- block heroConfig
-//-   - config.className = 'classicHero'
-//-   - config.cta = false
+block config
+  - config.className = 'hero'
 
 block copy
-  h1 Escribe aquí tu slogan
-  h2
-    b en negritas
-
-block callToAction
-  a(href='#') Click aquí
+  h2 Escríbe aquí tu título :D
