@@ -6,7 +6,8 @@
   background-color: lightseagreen;
   color: white;
 
-  &__copy {
+  h2{
     margin-top: 30vh;
+    @include col-full();
   }
 }
