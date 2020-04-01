@@ -1,0 +1,34 @@
+@import '~@codeinc.mx/sass-helpers-library/sass/main.scss';
+@import './mixins';
+
+@mixin classic-hero(
+  $class__name: 'classicHero',
+  $config__map: ()
+) {
+
+  .#{$class__name} {
+
+    @include full-screen-support($config__map);
+    @include container-support($config__map);
+
+    @include copy-support((
+        starts-in: full,
+        xs: full,
+        sm: full,
+        md: half,
+        lg: half,
+        xl: half
+    ));
+
+    @include callToAction-support((
+        starts-in: full,
+        xs: full,
+        sm: full,
+        md: half,
+        lg: half,
+        xl: half
+    ));
+  }
+
+  @content;
+}

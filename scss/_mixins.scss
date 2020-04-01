@@ -1,0 +1,43 @@
+@mixin full-screen-support($config__map) {
+  @if( map-value($config__map, full-screen, true) ) {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+@mixin container-support($config__map) {
+  &__container {
+    @if( map-value($config__map, content-centered, true ) ){
+      @include center-content;
+    }
+
+    @if( map-value($config__map, add-grid, true) ) {
+      @include add-grid;
+    }
+  }
+}
+
+@mixin symmetric-support($config__map) {
+  @if( map-value($config__map, symmetric, true) ) {
+    &__left { @include col-half; }
+    &__right { @include col-half; }
+  }
+}
+
+@mixin copy-support($col__map) {
+  &__copy {
+    @if $col__map == full { @include col-full(); }
+    @else {
+      @include col-map($col__map);
+    }
+  }
+}
+
+@mixin callToAction-support($col__map) {
+  &__cta {
+    @if $col__map == full { @include col-full(); }
+    @else {
+      @include col-map($col__map);
+    }
+  }
+}

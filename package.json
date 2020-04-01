@@ -1,6 +1,6 @@
 {
   "name": "@codeinc.mx/hero-component",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "description": "A great hero component for web design and development projects by Code Inc MX",
   "main": "scss/classic.scss",
   "scripts": {

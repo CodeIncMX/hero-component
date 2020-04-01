@@ -1,0 +1,14 @@
+@import './basic';
+@import './classic';
+@import './twofold';
+
+@mixin hero(
+  $type,
+  $class__name,
+  $config__map: ()
+) {
+  @if       $type == basic    { @include basic-hero   ($class__name, $config__map) { @content; } }
+  @else if  $type == classic  { @include classic-hero ($class__name, $config__map) { @content; } }
+  @else if  $type == twofold  { @include double-hero  ($class__name, $config__map) { @content; } }
+  @else { @error 'TYPE OF HERO SELECTED DOES NOT EXIST'; }
+}

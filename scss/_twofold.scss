@@ -1,0 +1,15 @@
+@import '~@codeinc.mx/sass-helpers-library/sass/main.scss';
+@import './mixins';
+
+@mixin double-hero(
+  $class__name: 'doubleHero',
+  $config__map: ()
+) {
+
+  .#{$class__name} {
+    @include full-screen-support($config__map);
+    @include container-support($config__map);
+    @include symmetric-support($config__map);
+    @content;
+  }
+}

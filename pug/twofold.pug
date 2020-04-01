@@ -1,0 +1,13 @@
+- config = {}
+
+//- Default values
+- config.className = 'doubleHero'
+
+block config
+
+div(class=config.className)
+  div(class=config.className + "__container")
+    div(class=config.className + "__left")
+      block right
+    div(class=config.className + "__right")
+      block left
